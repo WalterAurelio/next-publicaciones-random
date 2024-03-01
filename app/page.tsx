@@ -1,5 +1,12 @@
 import React from "react";
+import ListaPosteos from '@/components/ListaPosteos';
 
-export default function HelloWorld() {
-  return <div>Hello World</div>;
+export default function Inicio() {
+  return (
+    <main>
+      <h1>Publicaciones random Next.js</h1>
+
+      <ListaPosteos />
+    </main>
+  );
 }
