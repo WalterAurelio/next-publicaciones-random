@@ -34,7 +34,7 @@ export default async function ListaPosteos() {
             <div className="p-2 overflow-hidden h-full bg-white">
               <p className="text-black line-clamp-7">{post.body}</p>
             </div>
-            <Link href={`/${post.id}`} className="mt-auto p-2" >
+            <Link href={`/${post.id}`} className="uppercase text-center mt-auto p-2 bg-gray-800 hover:bg-slate-500 rounded-b-md" >
               Ver Post
             </Link>
           </div>
