@@ -17,14 +17,24 @@ interface Post {
 export default async function ListaPosteos() {
   const posts = await getPosts();
 
+  function bodyPost(body: string): string {
+    let cuerpo: string = body;
+    if (cuerpo.length > 160) {
+      cuerpo = `${cuerpo.slice(0, 160)}...`;
+    }
+    return cuerpo;
+  }
+
   return (
-    <div>
+    <div className="grid grid-cols-auto gap-8 p-4">
       {
         posts.map((post: Post) => (
-          <div key={post.id}>
-            <h2>Este es el post número {post.id}</h2>
-            <p>{post.body}</p>
-            <Link href={`/${post.id}`}>
+          <div key={post.id} className="flex flex-col h-[17.5rem] bg-slate-500 rounded-md">
+            <h2 className="mb-2 text-xl text-center p-2">Este es el post número {post.id}</h2>
+            <div className="p-2 overflow-hidden h-full bg-white">
+              <p className="text-black line-clamp-7">{post.body}</p>
+            </div>
+            <Link href={`/${post.id}`} className="mt-auto p-2" >
               Ver Post
             </Link>
           </div>

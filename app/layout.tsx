@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body>
-        <h1 className="text-[3rem] text-center mb-6">Publicaciones random Next.js</h1>
+        <h1 className="text-[4rem] text-center mb-6">Publicaciones random Next.js</h1>
 
         {children}
       </body>
