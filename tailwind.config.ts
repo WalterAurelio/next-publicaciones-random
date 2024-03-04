@@ -20,7 +20,10 @@ const config: Config = {
         12: '12'
       },
       gridTemplateColumns: {
-        'auto': 'repeat(auto-fit, minmax(250px, 1fr))'
+        'auto': 'repeat(auto-fit, minmax(300px, 1fr))'
+      },
+      width: {
+        'custom': 'min(max(768px, 75%), 100%)'
       }
     },
   },
